@@ -1,4 +1,3 @@
-/* Custom Styles for Book Library */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -67,4 +66,78 @@ body {
   .content {
     padding: 20px;
   }
+  /*.....................................................*/
+  /*basic styling for the forms */
+.devise-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
   
+  .devise-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .devise-form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .devise-form-container input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .devise-form-container .remember {
+    width: 100%;
+    display:flex;
+    margin-bottom: 10px;
+    gap:5px;
+  }
+
+
+  .devise-form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .devise-form-container input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .devise-form-container .form-footer {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .devise-form-container .form-footer a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .devise-form-container .form-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* responsive styling */
+  @media (max-width: 768px) {
+    .devise-form-container {
+      width: 90%;
+    }
+  }
