@@ -1,0 +1,11 @@
+<!-- borrowed_books.html.erb -->
+<h1>Your Borrowed Books</h1>
+
+<ul>
+  <% @borrowed_books.each do |book| %>
+    <li>
+      <%= book.title %> by <%= book.author %> (ISBN: <%= book.isbn %>)
+      <%= button_to 'Return', return_book_path(book), method: :post %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,9 @@
+<!-- show.html.erb -->
+<h1><%= @book.title %> by <%= @book.author %></h1>
+<p>ISBN: <%= @book.isbn %></p>
+
+<% if @book.borrowed? %>
+  <p>This book is currently borrowed.</p>
+<% else %>
+  <%= button_to 'Borrow', borrow_book_path(@book), method: :post %>
+<% end %>

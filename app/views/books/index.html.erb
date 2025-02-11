@@ -1,0 +1,11 @@
+<!-- index.html.erb -->
+<h1>Available Books</h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= book.title %> by <%= book.author %> (ISBN: <%= book.isbn %>)
+      <%= link_to 'View Details', book_path(book) %>
+    </li>
+  <% end %>
+</ul>
