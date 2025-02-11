@@ -5,7 +5,7 @@ class Book < ApplicationRecord
   
     # Check if the book is borrowed
     def borrowed?
-      borrowings.exists? # Returns true if there are any borrowings for this book
+      borrowings.exists? 
     end
   end
   

@@ -61,6 +61,11 @@ body {
   
   .logout-btn {
     background-color: #dc3545;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin-top: -10px;
   }
   
   .content {
@@ -134,10 +139,170 @@ body {
   .devise-form-container .form-footer a:hover {
     text-decoration: underline;
   }
-  
-  /* responsive styling */
   @media (max-width: 768px) {
     .devise-form-container {
       width: 90%;
     }
   }
+/*book styling*/
+.bookH1{
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+.bookUl{
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+.bookli {
+    background-color: #f4f4f4;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .bookli:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+.bookli.title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #333;
+  }
+.bookli.author {
+    color: #777;
+    font-style: italic;
+    font-size: 1rem;
+  }
+.bookli a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+.bookli a:hover {
+    color: #0056b3;
+  }
+.bookli + li {
+    margin-top: 20px;
+  }
+
+  /*book info page styling*/
+h1 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+p {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+ p + p {
+    font-size: 1.1rem;
+    color: #f44336;
+    font-weight: bold;
+    text-align: center;
+  }
+.bookbtn[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+   button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+ button[type="submit"]:active {
+    background-color: #004085;
+  }
+    p + p {
+    color: #8e44ad;
+  }
+  
+  /*profile*/
+.borrowed-books-list {
+  max-width:60%;
+  margin: 0 auto;
+}
+.borrowed-books-list h2{
+    text-align: center;
+    color: rgb(194, 58, 81);
+}
+
+.borrowed-book-item {
+  display: flex;
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.due-date-info{
+  color: rgb(182, 8, 8);
+}
+.book-info {
+display: flex;
+gap: 50px;
+font-size: 1rem;
+color: #333;
+margin-bottom: 10px;
+}
+.return-btn {
+  background-color: rgb(194, 58, 81);
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: -10px;
+}
+.return-btn:hover {
+  background-color: rgb(194, 58, 81);
+  transform: scale(1.05);
+}
+.return-btn:active {
+  background-color:rgb(194, 58, 81);
+}
+/*error messages*/
+.error-message{
+  background-color: rgb(233, 60, 60);
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5px;
+  color: white;
+  text-align: center;
+}

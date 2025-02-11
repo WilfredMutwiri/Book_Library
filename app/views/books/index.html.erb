@@ -1,9 +1,9 @@
 <!-- index.html.erb -->
-<h1>Available Books</h1>
+<h1 class="bookH1">Available Books</h1>
 
-<ul>
+<ul class="bookUl">
   <% @books.each do |book| %>
-    <li>
+    <li class="bookli">
       <%= book.title %> by <%= book.author %> (ISBN: <%= book.isbn %>)
       <%= link_to 'View Details', book_path(book) %>
     </li>

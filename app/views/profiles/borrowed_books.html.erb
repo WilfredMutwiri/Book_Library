@@ -1,11 +1,14 @@
 <!-- borrowed_books.html.erb -->
 <h1>Your Borrowed Books</h1>
 
-<ul>
+<div class="borrowed-books-list">
   <% @borrowed_books.each do |book| %>
-    <li>
-      <%= book.title %> by <%= book.author %> (ISBN: <%= book.isbn %>)
-      <%= button_to 'Return', return_book_path(book), method: :post %>
-    </li>
+    <div class="borrowed-book-item">
+      <div class="book-info">
+        <strong><%= book.title %></strong> by <%= book.author %> (ISBN: <%= book.isbn %>)
+      </div>
+      <%= button_to 'Return', return_book_path(book), method: :post, class: 'return-btn' %>
+    </div>
   <% end %>
-</ul>
+</div>
+
