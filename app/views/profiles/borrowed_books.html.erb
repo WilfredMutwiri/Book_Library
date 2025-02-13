@@ -7,7 +7,7 @@
       <div class="book-info">
         <strong><%= book.title %></strong> by <%= book.author %> (ISBN: <%= book.isbn %>)
       </div>
-      <%= button_to 'Return', return_book_path(book), method: :post, class: 'return-btn' %>
+      <%= button_to 'Return', return_book_book_path(book), method: :post, class: 'return-btn' %>
     </div>
   <% end %>
 </div>

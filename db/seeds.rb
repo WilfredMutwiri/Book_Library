@@ -12,5 +12,3 @@ Book.create([
   { title: "The Lord of the Rings", author: "J.R.R. Tolkien", isbn: "9780618640157" },
   { title: "Brave New World", author: "Aldous Huxley", isbn: "9780060850524" }
 ])
-
-# puts "10 books have been added to the database."

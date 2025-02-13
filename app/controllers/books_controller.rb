@@ -1,7 +1,10 @@
 class BooksController < ApplicationController
-  before_action :authenticate_user! # Require authentication for all actions
+  before_action :authenticate_user! 
   def index
     @books = Book.all
+  end
+  def profile
+    @borrowed_books = current_user.borrowings.includes(:book)
   end
   def show
     @book = Book.find_by(id: params[:id])
@@ -18,7 +21,7 @@ class BooksController < ApplicationController
     if @book.borrowed?
       redirect_to books_path, alert: 'This book is already borrowed.'
     else
-      @book.borrowings.create(user: current_user, due_date: 2.weeks.from_now)
+      @book.borrowings.create(user: current_user, due_date: 2.weeks.from_now, borrowed_at: Time.current)
       redirect_to profile_path, notice: 'You have successfully borrowed the book.'
     end
   end

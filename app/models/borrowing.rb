@@ -1,9 +1,9 @@
 class Borrowing < ApplicationRecord
-  belongs_to :book
   belongs_to :user
+  belongs_to :book
   # validates :borrowed_at, presence: true
   validates :due_date, presence: true
-
+  validates :borrowed_at, presence: true
   before_create :set_due_date
 
   private
